@@ -1,0 +1,27 @@
+{
+  "name": "failed-build-handler",
+  "version": "1.0.0",
+  "description": "Respond to failed builds",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc -p .",
+    "serve": "npm run compile && node index.js",
+    "test": "mocha '**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atomisthqa/failed-build-handler.git"
+  },
+  "keywords": [
+    "atomist"
+  ],
+  "author": "cd",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/atomisthqa/failed-build-handler/issues"
+  },
+  "homepage": "https://github.com/atomisthqa/failed-build-handler#readme",
+  "dependencies": {
+    "@types/node": "^8.0.25"
+  }
+}
