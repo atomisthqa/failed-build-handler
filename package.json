@@ -21,7 +21,7 @@
     "url": "https://github.com/atomisthqa/failed-build-handler/issues"
   },
   "homepage": "https://github.com/atomisthqa/failed-build-handler#readme",
-  "dependencies": {
+  "devDependencies": {
     "@types/node": "^8.0.25"
   }
 }
