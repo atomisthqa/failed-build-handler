@@ -79,7 +79,7 @@ export function handle(result: Result) {
 }
 ```
 
-[handler]: edit/master/Handler.ts
+[handler]: https://github.com/atomisthqa/failed-build-handler/edit/master/Handler.ts
 
 Once you have saved those changes, exit an currently running instance
 of this app and restart it, providing the Slack API token after your
