@@ -1,5 +1,7 @@
+import { send } from "@atomist/slack-messages/Slack";
+
 interface Result {
-    data: any;
+    data: {};
 }
 
 export function handle(result: Result) {

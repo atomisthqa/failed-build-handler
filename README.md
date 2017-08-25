@@ -31,8 +31,10 @@ $ npm install
 
 ## Running
 
-Your handler is a standard Node app and can be run with the following
-command.
+Before running your event handler application, you need
+to [create an Atomist API token][token].  After creating the token,
+Your handler, a [TypeScript][ts] Node app, can be run with the
+following command.
 
 ```
 $ npm run serve -- ATOMIST_TOKEN
@@ -50,7 +52,9 @@ Handler starting, type Ctrl-C to exit.
 Connected and listening for events of type: BuildFailed
 ```
 
-Type Control-C to exit the app.
+When you want to exit the app, type Control-C.
+
+[ts]: https://www.typescriptlang.org/ (TypeScript)
 
 ## Test
 
@@ -68,25 +72,30 @@ message.  Please [create a Slack API token][slack-token].
 
 [slack-token]: https://api.slack.com/tokens (Slack API Token)
 
-Change the contents of the `handle` function in [Handler.ts][handler]
+Change the contents of the `Handle.ts` file in [Handler.ts][handler]
 to be the following:
 
 ```typescript
+import { send } from "@atomist/slack-messages/Slack";
+
+interface Result {
+    data: {};
+}
+
 export function handle(result: Result) {
-    setTimeout(() => {
-        console.log("sent Slack DM to @you");
-    }, 3000);
+    send(result);
 }
 ```
 
 [handler]: https://github.com/atomisthqa/failed-build-handler/edit/master/Handler.ts
 
 Once you have saved those changes, exit an currently running instance
-of this app and restart it, providing the Slack API token after your
-Atomist token on the command line.
+of this app (Ctrl-C) and restart it, providing the Slack API token
+after your Atomist token on the command line.
 
 ```
 $ npm run serve -- ATOMIST_TOKEN SLACK_TOKEN
 ```
 
-Once the app is listening for events, send an [event][] to test it.
+Once the app is listening for events, send another [event][] to test
+it.
