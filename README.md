@@ -90,7 +90,7 @@ export function handle(result: Result) {
 Ctrl-C to exit any currently running instances
 of this app. 
 
-Start the app, providing the Slack API token
+Start the app. Provide the Slack API token
 after your Atomist token on the command line.
 
 ```
@@ -99,3 +99,5 @@ $ npm run serve -- ATOMIST_TOKEN SLACK_TOKEN
 
 Once the app is listening, send another [event][] to test
 it.
+
+Congratulations! Your first event handler is live!
