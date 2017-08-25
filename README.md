@@ -18,7 +18,7 @@ Clone this project repository locally and change into the project
 directory.
 
 ```
-$ git clone git@github.com:atomisthqa/failed-build-handler.git
+$ git clone https://github.com/atomisthqa/failed-build-handler.git
 $ cd failed-build-handler
 ```
 
