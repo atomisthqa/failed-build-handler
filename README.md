@@ -55,7 +55,7 @@ When you're ready to exit the app, type Ctrl-C.
 ## Test
 
 Once your app is running and listening for events, you
-can <a href="https://invis.io/G2D7I2A78#/250436834_Prototype-11--2px-pdf-png--2px-png" alt="event" target="_blank">send a test event</a> to see it in action.
+can <a href="https://invis.io/G2D7I2A78#/250436834_Prototype-11--2px-pdf-png--2px-png" alt="event" target="_blank"><strong>send a test event</strong></a> to see it in action.
 
 ## Customize
 
