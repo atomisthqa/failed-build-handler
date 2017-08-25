@@ -68,7 +68,7 @@ a Slack DM to the committer who broke the build.
 First, [create a Slack API token][slack-token] that Slack needs to accept
 and display your message. 
 
-[slack-token]: https://api.slack.com/tokens (Slack API Token)
+[slack-token]: https://invis.io/3MD7I4Q92#/250436835_Prototype-12--2px-pdf-png--2px-png (Slack API Token)
 
 Change the contents of the file [Handler.ts][handler] to be the following:
 
