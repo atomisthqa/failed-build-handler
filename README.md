@@ -83,6 +83,6 @@ after your Atomist token on the command line.
 $ npm run serve -- ATOMIST_TOKEN SLACK_TOKEN
 ```
 
-Once the app is listening, send another <a href="https://invis.io/G2D7I2A78#/250436834_Prototype-11--2px-pdf-png--2px-png" alt="event" target="_blank">event</a> to test it.
+Once the app is listening, send another <a href="https://invis.io/G2D7I2A78#/250436834_Prototype-11--2px-pdf-png--2px-png" alt="event" target="_blank">event</a> to test it, and [see the resulting message notification in Slack][https://invis.io/Y7D7KEZ36#/250436837_Prototype-14--2px-pdf-png--2px-png].
 
 If that worked, congratulations! Your first event handler is now live.
