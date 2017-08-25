@@ -99,4 +99,4 @@ $ npm run serve -- ATOMIST_TOKEN SLACK_TOKEN
 Once the app is listening, send another [event][] to test
 it.
 
-Congratulations! Your first event handler is live!
+If that worked, congratulations! Your first event handler is now live.
