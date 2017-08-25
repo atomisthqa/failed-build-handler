@@ -84,7 +84,7 @@ export function handle(result: Result) {
 }
 ```
 
-[handler]: https://github.com/atomisthqa/failed-build-handler/edit/master/Handler.ts
+[handler]: https://github.com/atomisthqa/failed-build-handler/edit/master/src/Handler.ts
 
 Ctrl-C to exit any currently running instances
 of this app. 
