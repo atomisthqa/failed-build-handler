@@ -12,7 +12,7 @@ export function listen(argv: string[]) {
                     head: {
                         sha: "faa0c31",
                         author: {
-                            email: "you@company.com",
+                            email: "madskillz@gmail.com",
                         },
                         repo: "atomisthqa/broken-repo",
                     },
