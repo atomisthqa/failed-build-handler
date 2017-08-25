@@ -23,9 +23,9 @@ export function listen(argv: string[]) {
     setTimeout(() => {
         console.log("Received event BuildFailed");
         handle([sampleResult]);
-    }, 10000);
+    }, 20000);
 
     setTimeout(() => {
         console.log("Caught Ctrl-C, exiting");
-    }, 60000);
+    }, 600000);
 }
