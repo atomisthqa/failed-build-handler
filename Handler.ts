@@ -1,5 +1,3 @@
-import { send } from "@atomist/slack-messages/Slack";
-
 interface Result {
     data: {};
 }
