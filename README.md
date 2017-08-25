@@ -6,7 +6,7 @@ that receives and responds to failed build events.
 [ts]: https://www.typescriptlang.org/ (TypeScript)
 
 This README walks you through:
-- running the handler as is 
+- running the handler 
 - extending the handler so that it sends a Slack DM to the person who broke the build
 
 ## Download
