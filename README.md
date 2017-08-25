@@ -21,22 +21,24 @@ $ cd failed-build-handler
 
 ## Dependencies
 
-You must have Node and NPM installed.
+You must have [Node][node] and [NPM][npm] to install your handler's dependencies: 
 
 [node]: https://nodejs.org (Node.js)
 
-Next, install your handler's dependencies.
+[npm]: https://www.npmjs.com/get-npm (NPM)
 
 ```
 $ npm install
 ```
 
+
 ## Running
 
 Next, [create an Atomist API token][token]. Note your API token!
+
 [token]: https://www.atomist.com/settings/token (Atomist API Token)
 
-Run your event handler app, replacing ATOMIST_TOKEN with your API token. 
+Run your event handler app, replacing ATOMIST_TOKEN with your API token: 
 
 ```
 $ npm run serve -- ATOMIST_TOKEN
@@ -49,7 +51,7 @@ Handler starting, type Ctrl-C to exit.
 Connected and listening for events of type: BuildFailed
 ```
 
-When you're ready to exit the app, type Control-C.
+When you're ready to exit the app, type Ctrl-C.
 
 ## Test
 
