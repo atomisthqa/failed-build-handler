@@ -18,5 +18,5 @@ export interface Result {
 }
 
 export function handle(results: Result[]) {
-    send(results);
+    email(results);
 }
