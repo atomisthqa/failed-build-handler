@@ -70,8 +70,7 @@ and display your message.
 
 [slack-token]: https://api.slack.com/tokens (Slack API Token)
 
-Change the contents of the `Handle.ts` file in [Handler.ts][handler]
-to be the following:
+Change the contents of the file [Handler.ts][handler] to be the following:
 
 ```typescript
 import { send } from "@atomist/slack-messages/Slack";
