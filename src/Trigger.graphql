@@ -1,0 +1,13 @@
+query FailedBuilds {
+  build(status: "FAILED") {
+    push {
+      head {
+        sha
+        author {
+           email
+        }
+        repo
+      }
+    }
+  }
+}
