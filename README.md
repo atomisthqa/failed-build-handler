@@ -36,7 +36,7 @@ $ npm install
 
 Next, [create an Atomist API token][token]. Note your API token!
 
-[token]: https://www.atomist.com/settings/token (Atomist API Token)
+[token]: https://invis.io/TQD7HZ5YP#/250436833_Prototype-10--2px-pdf-png--2px-png (Atomist API Token)
 
 Run your event handler app, replacing ATOMIST_TOKEN with your API token: 
 
@@ -58,7 +58,7 @@ When you're ready to exit the app, type Ctrl-C.
 Once your app is running and listening for events, you
 can [send a test event][event] to see it in action.
 
-[event]: https://www.atomist.com/events/build/failed?test=true
+[event]: https://invis.io/G2D7I2A78#/250436834_Prototype-11--2px-pdf-png--2px-png
 
 ## Customize
 
