@@ -5,8 +5,16 @@
     ],
     "jsRules": {},
     "rules": {
-        "interface-name": false,
-        "no-console": false
+        "arrow-parens": [
+            true,
+            "ban-single-arg-parens"
+        ],
+        "interface-name": [
+            true,
+            "never-prefix"
+        ],
+        "no-console": false,
+        "object-literal-sort-keys": false
     },
     "rulesDirectory": []
 }

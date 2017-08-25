@@ -4,16 +4,21 @@
   "description": "Respond to failed builds",
   "main": "index.js",
   "scripts": {
+    "autotest": "supervisor -q -n exit -e ts -x npm -- run test",
+    "clean": "find . -type d \\( -path ./node_modules \\) -prune -o -type f -name '*.js' -print0 | xargs -0 rm -f",
     "compile": "tsc -p .",
+    "lint": "tslint '**/*.ts' --exclude 'node_modules/**' -t verbose",
+    "lint-fix": "npm run lint -- --fix",
     "serve": "npm run compile && node index.js",
-    "test": "mocha '**/*.ts'"
+    "test": "mocha --compilers ts:espower-typescript/guess 'test/**/*.ts'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atomisthqa/failed-build-handler.git"
   },
   "keywords": [
-    "atomist"
+    "atomist",
+    "rug"
   ],
   "author": "cd",
   "license": "Apache-2.0",
@@ -22,7 +27,13 @@
   },
   "homepage": "https://github.com/atomisthqa/failed-build-handler#readme",
   "devDependencies": {
+    "@types/mocha": "^2.2.42",
     "@types/node": "^8.0.25",
+    "@types/power-assert": "^1.4.29",
+    "espower-typescript": "^8.1.0",
+    "mocha": "^3.5.0",
+    "power-assert": "^1.4.4",
+    "supervisor": "^0.12.0",
     "tslint": "^5.6.0",
     "typescript": "^2.4.2"
   }

@@ -1,13 +1,16 @@
 # failed-build-handler
 
-Welcome to your first Atomist event handler!  This handler is a [TypeScript][ts] Node app 
-that receives and responds to failed build events. 
+Welcome to your first Atomist event handler!  This handler is
+a [TypeScript][ts] Node app that receives and responds to failed build
+events.
 
 [ts]: https://www.typescriptlang.org/ (TypeScript)
 
 This README walks you through:
-- running the handler 
-- extending the handler so that it sends a Slack DM to the person who broke the build
+
+-   running the handler
+-   extending the handler so that it sends a Slack DM to the person
+    who broke the build
 
 ## Download
 
@@ -21,22 +24,20 @@ $ cd failed-build-handler
 
 ## Dependencies
 
-You must have [Node][node] and [NPM][npm] to install your handler's dependencies: 
+You must have [Node][node] and [NPM][npm] to install your handler's dependencies:
 
 [node]: https://nodejs.org (Node.js)
-
 [npm]: https://www.npmjs.com/get-npm (NPM)
 
 ```
 $ npm install
 ```
 
-
 ## Running
 
 Next, <a href="https://invis.io/TQD7HZ5YP#/250436833_Prototype-10--2px-pdf-png--2px-png" alt="Atomist API Token" target="_blank">create an Atomist API token</a>. Note your API token!
 
-Run your event handler app, replacing ATOMIST_TOKEN with your API token: 
+Run your event handler app, replacing ATOMIST_TOKEN with your API token:
 
 ```
 $ npm run serve -- ATOMIST_TOKEN
@@ -59,27 +60,21 @@ can <a href="https://invis.io/G2D7I2A78#/250436834_Prototype-11--2px-pdf-png--2p
 ## Customize
 
 Now that you have everything working, let's change the handler to send
-a Slack DM to the committer who broke the build.  
+a Slack DM to the committer who broke the build.
 
 First, <a href="https://invis.io/3MD7I4Q92#/250436835_Prototype-12--2px-pdf-png--2px-png" alt="Slack API Token" target="_blank">create a Slack API token</a> that Slack needs to accept
-and display your message. 
+and display your message.
 
-Change the contents of the file <a href="https://github.com/atomisthqa/failed-build-handler/edit/master/src/Handler.ts" alt="handler" target="_blank">Handler.ts</a> to be the following:
+Change the `handle` function in <a href="https://github.com/atomisthqa/failed-build-handler/edit/master/src/Handler.ts" alt="handler" target="_blank">src/Handler.ts</a> to be the following:
 
 ```typescript
-import { send } from "@atomist/slack-messages/Slack";
-
-interface Result {
-    data: {};
-}
-
-export function handle(result: Result) {
-    send(result);
+export function handle(results: Result[]) {
+    send(results);
 }
 ```
 
 Ctrl-C to exit any currently running instances
-of this app. 
+of this app.
 
 Start the app. Provide the Slack API token
 after your Atomist token on the command line.
