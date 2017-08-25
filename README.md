@@ -1,9 +1,13 @@
 # failed-build-handler
 
-Welcome to your first Atomist event handler!  This event receives and
-responds to failed build events.  This README will walk you through
-running this handler as is and extending it to send a Slack DM to the
-person who broke the build.
+Welcome to your first Atomist event handler!  This handler is a [TypeScript][ts] Node app 
+that receives and responds to failed build events. 
+
+[ts]: https://www.typescriptlang.org/ (TypeScript)
+
+This README walks you through:
+- running the handler as is 
+- extending the handler so that it sends a Slack DM to the person who broke the build
 
 ## Download
 
@@ -17,13 +21,11 @@ $ cd failed-build-handler
 
 ## Dependencies
 
-You must have Node and NPM installed.  Installing the latest version
-of [Node][node] is the easiest way to do this.
+You must have Node and NPM installed.
 
 [node]: https://nodejs.org (Node.js)
 
-Once Node and NPM are available on your system, you can install your
-handler's dependencies with the following command.
+Next, install your handler's dependencies.
 
 ```
 $ npm install
@@ -31,34 +33,27 @@ $ npm install
 
 ## Running
 
-Before running your event handler application, you need
-to [create an Atomist API token][token].  After creating the token,
-Your handler, a [TypeScript][ts] Node app, can be run with the
-following command.
+Next, [create an Atomist API token][token]. Note your API token!
+[token]: https://www.atomist.com/settings/token (Atomist API Token)
+
+Run your event handler app, replacing ATOMIST_TOKEN with your API token. 
 
 ```
 $ npm run serve -- ATOMIST_TOKEN
 ```
 
-replacing `ATOMIST_TOKEN` with your [Atomist API token][token].
-
-[token]: https://www.atomist.com/settings/token (Atomist API Token)
-
-When the application starts running, you will see the following
-output.
+You'll see this output:
 
 ```
 Handler starting, type Ctrl-C to exit.
 Connected and listening for events of type: BuildFailed
 ```
 
-When you want to exit the app, type Control-C.
-
-[ts]: https://www.typescriptlang.org/ (TypeScript)
+When you're ready to exit the app, type Control-C.
 
 ## Test
 
-Once you have your app running and it is listening for events, you
+Once your app is running and listening for events, you
 can [send a test event][event] to see it in action.
 
 [event]: https://www.atomist.com/events/build/failed?test=true
@@ -66,9 +61,10 @@ can [send a test event][event] to see it in action.
 ## Customize
 
 Now that you have everything working, let's change the handler to send
-a Slack DM to the committer who broke the build.  The first thing we
-need is a Slack API token so Slack will accept and display the
-message.  Please [create a Slack API token][slack-token].
+a Slack DM to the committer who broke the build.  
+
+First, [create a Slack API token][slack-token] that Slack needs to accept
+and display your message. 
 
 [slack-token]: https://api.slack.com/tokens (Slack API Token)
 
@@ -89,13 +85,15 @@ export function handle(result: Result) {
 
 [handler]: https://github.com/atomisthqa/failed-build-handler/edit/master/Handler.ts
 
-Once you have saved those changes, exit an currently running instance
-of this app (Ctrl-C) and restart it, providing the Slack API token
+Ctrl-C to exit any currently running instances
+of this app. 
+
+Start the app, providing the Slack API token
 after your Atomist token on the command line.
 
 ```
 $ npm run serve -- ATOMIST_TOKEN SLACK_TOKEN
 ```
 
-Once the app is listening for events, send another [event][] to test
+Once the app is listening, send another [event][] to test
 it.
