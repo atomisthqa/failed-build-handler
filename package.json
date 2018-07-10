@@ -10,7 +10,8 @@
     "lint": "tslint '**/*.ts' --exclude 'node_modules/**' -t verbose",
     "lint-fix": "npm run lint -- --fix",
     "serve": "npm run compile && node index.js",
-    "test": "mocha --compilers ts:espower-typescript/guess 'test/**/*.ts'"
+    "test": "mocha --compilers ts:espower-typescript/guess 'test/**/*.ts'",
+    "build": "echo 'The build goes here'"
   },
   "repository": {
     "type": "git",
